@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace MoviesApi.Models
+namespace MoviesApi.Models.Identity
 {
     [Owned]
     public class RefreshToken
@@ -10,7 +10,7 @@ namespace MoviesApi.Models
         public bool IsExpired => DateTime.UtcNow > ExpireOn;
 
         public DateTime CreatedOn { get; set; }
-        public DateTime? RevokedOn { get; set;}
+        public DateTime? RevokedOn { get; set; }
 
         public bool IsActive => RevokedOn == null && !IsExpired;
     }

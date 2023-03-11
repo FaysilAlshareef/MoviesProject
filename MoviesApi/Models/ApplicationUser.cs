@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using MoviesApi.Models.Identity;
 
 namespace MoviesApi.Models
 {
