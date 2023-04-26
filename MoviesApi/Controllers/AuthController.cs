@@ -29,8 +29,8 @@ namespace MoviesApi.Controllers
                 return BadRequest(result.Massege);
 
             SetRefreshTokenInCookie(result.RefreshToken, result.RefreshTokenExpiration);
-
-            return Ok(result);
+            var name = "Ali";
+            return Ok(result); 
         }
 
         [HttpPost("login")]
